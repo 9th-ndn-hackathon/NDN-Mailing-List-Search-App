@@ -1,0 +1,283 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+
+<header id="header" class="header">
+    <div class="header-menu">
+        <div class="col-sm-7">
+            <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+
+        </div>
+        <div class="col-sm-5">
+            <div class="user-area dropdown float-right">
+
+            </div>
+            <div class="language-select dropdown" id="language-select">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="language" aria-haspopup="true" aria-expanded="true">
+                  
+                </a>
+                <div class="dropdown-menu" aria-labelledby="language">
+                    <div class="dropdown-item">
+                        <span class="flag-icon flag-icon-fr"></span>
+                    </div>
+                    <div class="dropdown-item">
+                        <i class="flag-icon flag-icon-es"></i>
+                    </div>
+                    <div class="dropdown-item">
+                        <i class="flag-icon flag-icon-us"></i>
+                    </div>
+                    <div class="dropdown-item">
+                        <i class="flag-icon flag-icon-it"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="content mt-3">
+
+
+    <div class="col-sm-6 col-lg-3" style="cursor:pointer" onclick="location.href = '/NDNInterest/'">
+        <div class="card text-white bg-flat-color-1">
+            <div class="card-body pb-0">
+                <h4 class="mb-0">
+                    <span class="count">@ViewBag.NDNInterest</span>
+                </h4>
+                <p class="text-light">NDN-INTEREST</p>
+                <div class="chart-wrapper px-0" style="height:70px;" height="70">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/.col-->
+    <div class="col-sm-6 col-lg-3" style="cursor:pointer" onclick="location.href = '/'">
+        <div class="card text-white bg-flat-color-2">
+            <div class="card-body pb-0">
+                <h4 class="mb-0">
+                    <span class="count">@ViewBag.NFDDev</span>
+                </h4>
+                <p class="text-light"> NFD-DEV</p>
+                <div class="chart-wrapper px-0" style="height:70px;" height="70">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/.col-->
+    <div class="col-sm-6 col-lg-3" style="cursor:pointer" onclick="location.href = '/'">
+        <div class="card text-white bg-flat-color-3">
+            <div class="card-body pb-0">
+                <h4 class="mb-0">
+                    <span class="count">@ViewBag.NDNLib</span>
+                </h4>
+                <p class="text-light"> NDN-LIB </p>
+            </div>
+            <div class="chart-wrapper px-0" style="height:70px;" height="70">
+
+            </div>
+        </div>
+    </div>
+    <!--/.col-->
+    <div class="col-sm-6 col-lg-3" style="cursor:pointer" onclick="location.href = '/'">
+        <div class="card text-white bg-flat-color-4">
+            <div class="card-body pb-0">
+                <h4 class="mb-0">
+                    <span class="count">@ViewBag.ndnSIM</span>
+                </h4>
+                <p class="text-light"> ndnSIM</p>
+                <div class="chart-wrapper px-3" style="height:70px;" height="70">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="col-sm-6 col-lg-3" style="cursor:pointer" onclick="location.href = '/'">
+        <div class="card text-white bg-flat-color-5">
+            <div class="card-body pb-0">
+                <h4 class="mb-0">
+                    <span class="count">@ViewBag.NDNApp</span>
+                </h4>
+                <p class="text-light"> NDN-APP</p>
+                <div class="chart-wrapper px-0" style="height:70px;" height="70">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/.col-->
+    <div class="col-sm-6 col-lg-3" style="cursor:pointer" onclick="location.href = '/'">
+        <div class="card text-white" style="background-color: lightcoral ">
+            <div class="card-body pb-0">
+                <h4 class="mb-0">
+                    <span class="count">@ViewBag.MiniNDN</span>
+                </h4>
+                <p class="text-light"> Mini-NDN</p>
+                <div class="chart-wrapper px-0" style="height:70px;" height="70">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/.col-->
+    <div class="col-sm-6 col-lg-3" style="cursor:pointer" onclick="location.href = '/'">
+        <div class="card text-white" style="background-color: green ">
+            <div class="card-body pb-0">
+                <h4 class="mb-0">
+                    <span class="count">@ViewBag.NLSR</span>
+                </h4>
+                <p class="text-light"> NLSR </p>
+            </div>
+            <div class="chart-wrapper px-0" style="height:70px;" height="70">
+
+            </div>
+        </div>
+    </div>
+    <!--/.col-->
+    <div class="col-sm-6 col-lg-3" style="cursor:pointer" onclick="location.href = '/'">
+        <div class="card text-white" style="background-color: palevioletred ">
+            <div class="card-body pb-0">
+                <h4 class="mb-0">
+                    <span class="count">@ViewBag.Total</span>
+                </h4>
+                <p class="text-light">Total</p>
+                <div class="chart-wrapper px-3" style="height:70px;" height="70">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="col-xl-3 col-lg-6" style="cursor:pointer" onclick="location.href = '/'">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="stat-widget-one">
+                    <div class="stat-icon dib"><i class="ti-user" style="border-color:#20a8d8; color:#20a8d8"></i></div>
+                    <div class="stat-content dib">
+                        <div class="stat-text">Highest Number of Message on NDN Interest: 0</div>
+                        <div class="stat-digit">@ViewBag.TopNDNInterest</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6" style="cursor:pointer" onclick="location.href = '/'">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-one">
+                    <div class="stat-icon dib"><i class="ti-user" style="border-color:#63c2de; color:#63c2de"></i></div>
+                    <div class="stat-content dib">
+                        <div class="stat-text">Highest Number of Message on NFD Dev: 0</div>
+                        <div class="stat-digit">@ViewBag.TopNFDDev</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6" style="cursor:pointer" onclick="location.href = '/'">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-one">
+                    <div class="stat-icon dib"><i class="ti-user" style="border-color:#ffc107; color:#ffc107"></i></div>
+                    <div class="stat-content dib">
+                        <div class="stat-text">Highest Number of Message on NDN-LIB: 0</div>
+                        <div class="stat-digit">@ViewBag.TopNDNLib</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6" style="cursor:pointer" onclick="location.href = '/'">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-one">
+                    <div class="stat-icon dib"><i class="ti-user" style="border-color:#f86c6b; color:#f86c6b"></i></div>
+                    <div class="stat-content dib">
+                        <div class="stat-text">Highest Number of Message on ndnSIM: 0</div>
+                        <div class="stat-digit">@ViewBag.TopNDNSIM</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6" style="cursor:pointer" onclick="location.href = '/'">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-one">
+                    <div class="stat-icon dib"><i class="ti-user" style="border-color:#4dbd74; color:#4dbd74"></i></div>
+                    <div class="stat-content dib">
+                        <div class="stat-text">Highest Number of Message on NDN App: 0</div>
+                        <div class="stat-digit">@ViewBag.TopNDNApp</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6" style="cursor:pointer" onclick="location.href = '/'">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-one">
+                    <div class="stat-icon dib"><i class="ti-user" style="border-color:lightcoral; color:lightcoral"></i></div>
+                    <div class="stat-content dib">
+                        <div class="stat-text">Highest Number of Message on MiniNDN: 0</div>
+                        <div class="stat-digit">@ViewBag.TopMiniNDN</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-lg-6" style="cursor:pointer" onclick="location.href = '/'">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-one">
+                    <div class="stat-icon dib"><i class="ti-user" style="border-color:green; color:green"></i></div>
+                    <div class="stat-content dib">
+                        <div class="stat-text">Highest Number of Message on NLSR: 0</div>
+                        <div class="stat-digit">@ViewBag.TopNLSR</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6" style="cursor:pointer" onclick="location.href = '/'">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-one">
+                    <div class="stat-icon dib"><i class="ti-user" style="border-color:palevioletred; color:palevioletred"></i></div>
+                    <div class="stat-content dib">
+                        <div class="stat-text">Highest Number of Message on ALL NDN Mailing List: 0</div>
+                        <div class="stat-digit">@ViewBag.TotalContactUsRequests</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div> <!-- .content -->

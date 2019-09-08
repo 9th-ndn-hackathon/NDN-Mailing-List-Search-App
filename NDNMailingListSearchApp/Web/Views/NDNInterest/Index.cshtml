@@ -1,0 +1,72 @@
+﻿@using Models.DatabaseModels
+@model List<Models.DatabaseModels.NDNInterest>
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">NDN Interest Search</strong>
+                        <div class="input-group md-form form-sm form-1 pl-0">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text purple lighten-3" id="basic-text1">
+                                    <i class="fas fa-search text-white"
+                                       aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            @using (Html.BeginForm("Index", "NDNInterest", FormMethod.Get,
+                                                              new { enctype = "multipart/form-data", @class = "col-md-10" }))
+                            {
+
+                                if (Request.QueryString["keyword"] == null || string.IsNullOrEmpty(Request.QueryString["keyword"].ToString()))
+                                {
+                                    <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search" name="keyword" id="keyword">
+                                }
+                                else
+                                {
+                                    <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search" name="keyword" id="keyword" value="@Request.QueryString["keyword"].ToString()">
+                                }
+
+
+                            }
+
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        @Model.Count Records Found
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">From Name</th>
+                                    <th scope="col">From Email</th>
+                                    <th scope="col">Posted Date</th>
+                                    <th scope="col">Message Text</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <th scope="row">@item.Title</th>
+                                            <td>@item.FromName</td>
+                                            <td>@item.FromEmail</td>
+                                            <td>@item.PostedDate</td>
+                                            <td>@item.MessageText.Substring(0, 10) .. <a target="_blank" href="@item.PageURL">View More</a></td>
+                                        </tr>
+                                    }
+                                }
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div><!-- .animated -->
+</div><!-- .content -->
