@@ -16,7 +16,7 @@
                             </div>
                             @using (Html.BeginForm("Index", "NDNInterest", FormMethod.Get,
                                                               new { enctype = "multipart/form-data", @class = "col-md-10" }))
-                            {
+                            { 
 
                                 if (Request.QueryString["keyword"] == null || string.IsNullOrEmpty(Request.QueryString["keyword"].ToString()))
                                 {
