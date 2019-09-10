@@ -71,7 +71,7 @@ namespace WebScrapper
                 throw;
             }
         }
-
+        // Following code will fetch the content from the page for example: https://www.lists.cs.ucla.edu/pipermail/ndn-interest/2019-June/002473.html
         public Message FetchPageContent(string pageURL)
         {
             try
